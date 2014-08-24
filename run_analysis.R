@@ -1,5 +1,6 @@
 ##First, we should set the main directory.
 setwd("E:/Rprogrammingsourse")
+
 ##Q1 Construct a complete data by using labels and measurements
 data<-read.table("UCI HAR Dataset/train/X_train.txt",sep="")
 data1<-read.table("UCI HAR Dataset/test/X_test.txt",sep="")
