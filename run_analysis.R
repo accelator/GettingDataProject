@@ -6,7 +6,7 @@ data1<-read.table("UCI HAR Dataset/test/X_test.txt",sep="")
 datafin<-data.frame(rbind(data,data1),stringsAsFactors=FALSE)
 ##datafin is the merged result of X_train.txt and X_test.txt.
 
-##For convenience of the rest questions, I will first get the final data.
+##For convenience of the rest questions, I will first get some of the final data in advance.
 datalab<-read.table("UCI HAR Dataset/train/y_train.txt")$V1
 data1lab<-read.table("UCI HAR Dataset/test/y_test.txt")$V1
 datalabfin<-c(datalab,data1lab)
@@ -27,6 +27,7 @@ datalabfin[datalabfin==5]<-"STANDING"
 datalabfin[datalabfin==6]<-"LAYING"
 datanew<-data.frame("activity"=datalabfin,datanew)
 ##Q4 Name variables with descriptive labels
+##The answer of this question is the same as Q3.
 ##This assignemnt has already been done in the first question. The final datanew has variable labels.
 ##Q5 
 datasubject<-datalab<-read.table("UCI HAR Dataset/train/subject_train.txt")$V1
